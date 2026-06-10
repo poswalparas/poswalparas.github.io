@@ -1,5 +1,5 @@
 ---
-title: "Paper Title Number 2"
+title: "Unveiling the electronic and magnetic landscape of 3d transition metal doped hydrogenated borophene: A first-principles study"
 collection: publications
 category: manuscripts
 permalink: /publication/2010-10-01-paper-title-number-2
