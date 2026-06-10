@@ -9,16 +9,24 @@ redirect_from:
 
 ## About Me
 
-I am a Computational Materials Scientist working in the areas of spintronics, two-dimensional materials, magnetic materials, and first-principles calculations.
+I am a PhD Candidate in the Department of Physics at NIT Patna, working in the field of computational materials science. My research focuses on understanding and engineering the electronic, magnetic, and spin-dependent properties of low-dimensional materials using first-principles calculations based on density functional theory (DFT).
 
-My research combines density functional theory (DFT) simulations and experimental investigations to understand and engineer magnetic and electronic properties of emerging quantum materials.
+My work spans spintronics, two-dimensional magnetic materials, Janus transition metal dichalcogenides, magnetic anisotropy engineering, defect-induced magnetism, and irradiation-driven material modification. I combine computational modeling with experimental collaborations to explore next-generation materials for energy-efficient electronic and spintronic devices.
 
-### Research Interests
+## Research Interests
 
-- Spintronics
-- 2D Magnetic Materials
-- Janus Transition Metal Dichalcogenides
-- Magnetic Anisotropy Engineering
-- Defect Engineering
-- First-Principles Calculations
-- Irradiation-Induced Magnetism
+* Spintronics
+* Two-Dimensional Magnetic Materials
+* Janus Transition Metal Dichalcogenides (TMDs)
+* Magnetic Anisotropy Engineering
+* Defect Engineering
+* Density Functional Theory (DFT)
+* Quantum ESPRESSO
+* Irradiation-Induced Magnetism
+
+## Current Position
+
+PhD Candidate
+Department of Physics
+National Institute of Technology Patna
+
