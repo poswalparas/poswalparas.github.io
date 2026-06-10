@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Paras Poswal"
+title: ""
 author_profile: true
 redirect_from: 
   - /about/
@@ -9,24 +9,27 @@ redirect_from:
 
 ## About Me
 
-I am a PhD Candidate in the Department of Physics at NIT Patna, working in the field of computational materials science. My research focuses on understanding and engineering the electronic, magnetic, and spin-dependent properties of low-dimensional materials using first-principles calculations based on density functional theory (DFT).
+I am a PhD Candidate in the Department of Physics at the National Institute of Technology Patna, India. My research focuses on computational and experimental condensed matter physics, with particular emphasis on spintronics, two-dimensional magnetic materials, and first-principles simulations.
 
-My work spans spintronics, two-dimensional magnetic materials, Janus transition metal dichalcogenides, magnetic anisotropy engineering, defect-induced magnetism, and irradiation-driven material modification. I combine computational modeling with experimental collaborations to explore next-generation materials for energy-efficient electronic and spintronic devices. 
+My work combines density functional theory (DFT) calculations and ion-irradiation-driven experimental approaches to investigate magnetic anisotropy, exchange interactions, spin polarization, and defect-induced magnetism in low-dimensional materials.
 
 ## Research Interests
 
 * Spintronics
 * Two-Dimensional Magnetic Materials
-* Janus Transition Metal Dichalcogenides (TMDs)
+* First-Principles Calculations (DFT)
 * Magnetic Anisotropy Engineering
+* Janus Transition Metal Dichalcogenides
 * Defect Engineering
-* Density Functional Theory (DFT)
-* Quantum ESPRESSO
-* Irradiation-Induced Magnetism
+* Topological Spin Physics
+* Interface and Proximity Effects
 
 ## Current Position
 
-PhD Candidate
+**PhD Candidate**
 Department of Physics
-National Institute of Technology Patna
+National Institute of Technology Patna, India
 
+## Research Vision
+
+My long-term goal is to understand and engineer magnetic and spin-dependent phenomena in low-dimensional materials for next-generation spintronic and quantum technologies.
