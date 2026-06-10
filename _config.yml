@@ -24,13 +24,13 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Paras Poswal"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "Computational Materials Scientist | Spintronics | 2D Materials | First-Principles Simulations"
+  location         : "Patna, India"
+  employer         : "National Institute of Technology Patna, India"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "parasp.ph21.ph@nitp.ac.in" 
 
   # Academic websites
   academia         : # URL
