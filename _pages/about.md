@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: ""
+title: "Paras Poswal"
 author_profile: true
 redirect_from: 
   - /about/
