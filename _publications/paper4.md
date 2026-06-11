@@ -1,7 +1,7 @@
 ---
 title: "First-principles and experimental investigation of d0 magnetism in proton-implanted HOPG"
 collection: publications
-category: manuscripts
+category: manuscripts_first
 permalink: /publication/paper4
 date: 2026-05-12
 excerpt: ''
