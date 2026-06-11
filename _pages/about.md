@@ -21,8 +21,10 @@ two-dimensional magnetic materials, first-principles
 simulations, and defect-engineered quantum materials.
 </p>
 
+<div class="hero-buttons">
 <a href="/publications/" class="btn btn--primary">Publications</a>
 <a href="/contact/" class="btn btn--info">Contact</a>
+</div>
 
   </div>
   <div class="hero-image">
