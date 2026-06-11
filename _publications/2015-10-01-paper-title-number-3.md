@@ -2,7 +2,7 @@
 title: "Unveiling the electronic and magnetic landscape of 3d transition metal doped hydrogenated borophene: A first-principles study."
 collection: publications
 category: manuscripts
-excerpt: 'This paper is about the number 3. The number 4 is left for future work.'
+excerpt: ''
 permalink: /publication/2015-10-01-paper-title-number-3
 date: 2024-07-24
 venue: 'Physical Chemistry Chemical Physics'
