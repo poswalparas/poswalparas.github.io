@@ -7,6 +7,7 @@ date: 2025-08-10
 excerpt: ''
 venue: 'Journal of Alloys and Compounds'
 paperurl: 'https://academicpages.github.io/files/zno_2025_strain_jalcom.pdf'
+citation: 'Sheshamani Singh, Neeraj Shukla, Paras Poswal, Rohit Tyagi, Ram Kumar, Sandeep B Bari, Sujay Chakravarty, Aditya H Kelkar'
 ---
 
 Abstract
