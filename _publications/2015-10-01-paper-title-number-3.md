@@ -6,7 +6,7 @@ excerpt: ''
 permalink: /publication/2015-10-01-paper-title-number-3
 date: 2024-07-24
 venue: 'Physical Chemistry Chemical Physics'
-paperurl: 'https://academicpages.github.io/files/pccp_2024.pdf'
+paperurl: 'https://poswalparas.github.io/files/pccp_2024.pdf'
 citation: 'Paras Poswal and Neeraj Shukla'
 ---
 
