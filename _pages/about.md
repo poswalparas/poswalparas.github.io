@@ -9,9 +9,9 @@ redirect_from:
 <div class="hero-banner">
   <div class="hero-content">
 
-  <h1>PARAS POSWAL</h1>
+  <h1>Paras Poswal</h1>
 
-  <h3>Computational Materials Scientist</h3>
+  <h3>Spintronics • 2D Magnetic Materials • First-Principles Simulations</h3>
 
   <p>
   Engineering Magnetism and Spin Polarization
@@ -78,3 +78,28 @@ National Institute of Technology Patna, India
 ## Research Vision
 
 My long-term goal is to understand and engineer magnetic and spin-dependent phenomena in low-dimensional materials for next-generation spintronic and quantum technologies.
+<h2>Research at a Glance</h2>
+
+<div class="stats-grid">
+
+<div class="stat-box">
+<h2>6+</h2>
+<p>Publications</p>
+</div>
+
+<div class="stat-box">
+<h2>4</h2>
+<p>First-Author Papers</p>
+</div>
+
+<div class="stat-box">
+<h2>DFT</h2>
+<p>Quantum ESPRESSO & WIEN2k</p>
+</div>
+
+<div class="stat-box">
+<h2>2D</h2>
+<p>Spintronic Materials</p>
+</div>
+
+</div>
