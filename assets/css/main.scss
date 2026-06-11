@@ -61,7 +61,7 @@ background:#000000;
 }
 
 .hero-image{
-flex:12;
+flex:1.4;
 }
 
 .hero-image img{
@@ -210,21 +210,7 @@ color:white;
 margin:0;
 padding:0;
 }
-/* ---------- Full-width layout ---------- */
 
-#main{
-    max-width:1600px;
-    width:95%;
-    margin:0 auto;
-}
-
-.page{
-    width:100%;
-}
-
-.page__inner-wrap{
-    max-width:100%;
-}
 /* =========================================
    CUSTOM HOMEPAGE
 ========================================= */
