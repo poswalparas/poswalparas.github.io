@@ -41,3 +41,56 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+.hero-banner{
+background-image:url('/images/home/hero-bg.png');
+background-size:cover;
+background-position:center;
+min-height:500px;
+padding:60px;
+border-radius:20px;
+margin-bottom:40px;
+display:flex;
+align-items:center;
+}
+
+.hero-content{
+max-width:700px;
+}
+
+.hero-content h1{
+font-size:4rem;
+color:white;
+margin-bottom:10px;
+}
+
+.hero-content h3{
+color:#69c0ff;
+}
+
+.hero-content p{
+font-size:1.4rem;
+color:white;
+margin-bottom:25px;
+}
+
+.research-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+}
+
+.research-card{
+border-radius:15px;
+overflow:hidden;
+background:#1f2937;
+}
+
+.research-card img{
+width:100%;
+display:block;
+}
+
+.research-card h3,
+.research-card p{
+padding:15px;
+}
