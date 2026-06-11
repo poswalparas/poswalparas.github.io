@@ -1,7 +1,7 @@
 ---
 title: "Magnetic anisotropy and ferromagnetic ordering in 3d transition metal adsorbed fluorinated borophene γ-B8F4: A first-principles study"
 collection: publications
-category: manuscripts
+category: manuscripts_first
 permalink: /publication/paper3
 date: 2026-05-15
 excerpt: ''
