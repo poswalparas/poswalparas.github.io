@@ -1,5 +1,5 @@
 ---
-title: "Unraveling the effect of 600 keV carbon ion irradiation on the structural and magnetic properties of ZnO thin film"
+title: "Strain modulated rise, reduction, and resurrection of ferromagnetic ordering and structural properties in ZnO nanostructures due to 1.2 MeV proton implantation"
 collection: publications
 category: manuscripts_co
 permalink: /publication/zno_co_author2
