@@ -1,12 +1,57 @@
 ---
 permalink: /
 title: "Paras Poswal"
-author_profile: true
+author_profile: false
 redirect_from: 
   - /about/
   - /about.html
 ---
+<div class="hero-banner">
+  <div class="hero-content">
 
+  <h1>PARAS POSWAL</h1>
+
+  <h3>Computational Materials Scientist</h3>
+
+  <p>
+  Engineering Magnetism and Spin Polarization
+  in Two-Dimensional Quantum Materials
+  </p>
+
+  <a href="/publications/" class="btn btn--primary">Publications</a>
+  <a href="/contact/" class="btn btn--info">Contact</a>
+
+  </div>
+</div>
+## Research Highlights
+
+<div class="research-grid">
+
+<div class="research-card">
+<img src="/images/home/cri3-card.png">
+<h3>2D Magnetism</h3>
+<p>CrI₃, CrCl₃ and van der Waals magnetic materials.</p>
+</div>
+
+<div class="research-card">
+<img src="/images/home/janus-card.png">
+<h3>Janus TMDs</h3>
+<p>Spin polarization and spintronic applications.</p>
+</div>
+
+<div class="research-card">
+<img src="/images/home/borophene-card.png">
+<h3>Borophene</h3>
+<p>Electronic and magnetic properties of borophene derivatives.</p>
+</div>
+
+<div class="research-card">
+<img src="/images/home/irradiation-card.png">
+<h3>Irradiation Effects</h3>
+<p>Defect engineering and irradiation-induced magnetism.</p>
+</div>
+
+</div>
 ## About Me
 
 I am a PhD Candidate in the Department of Physics at the National Institute of Technology Patna, India. My research focuses on computational and experimental condensed matter physics, with particular emphasis on spintronics, two-dimensional magnetic materials, and first-principles simulations.
