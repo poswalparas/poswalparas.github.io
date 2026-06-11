@@ -28,9 +28,14 @@ redirect_from:
 <div class="research-grid">
 
 <div class="research-card">
+
 <img src="/images/home/cri3-card.png">
+
+<div class="card-overlay">
 <h3>2D Magnetism</h3>
-<p>CrI₃, CrCl₃ and van der Waals magnetic materials.</p>
+<p>CrI₃ • CrCl₃ • Exchange Coupling</p>
+</div>
+
 </div>
 
 <div class="research-card">
