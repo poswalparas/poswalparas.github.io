@@ -18,6 +18,7 @@ Patna, Bihar, India
 ### Email 
 
 [parasp.ph21.ph@nitp.ac.in](mailto:parasp.ph21.ph@nitp.ac.in)
+
 [poswalparas@gmail.com](mailto:poswalparas@gmail.com)
 
 ### Research Profiles
