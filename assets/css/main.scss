@@ -177,3 +177,28 @@ border-radius:20px;
 .about-text{
 flex:1;
 }
+.card-overlay{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+padding:25px;
+background:linear-gradient(
+to top,
+rgba(0,0,0,0.9),
+rgba(0,0,0,0.4),
+transparent
+);
+}
+
+.card-overlay h3{
+color:white;
+margin:0 0 10px 0;
+padding:0;
+}
+
+.card-overlay p{
+color:white;
+margin:0;
+padding:0;
+}
