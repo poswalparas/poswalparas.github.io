@@ -42,20 +42,6 @@
     "vendor/font-awesome/brands"
 ;
 .hero-banner{
-position:relative;
-background-image:url('/images/home/hero-bg.png');
-background-size:cover;
-background-position:center;
-min-height:650px;
-border-radius:25px;
-overflow:hidden;
-display:flex;
-align-items:center;
-padding:80px;
-margin-bottom:70px;
-}
-
-.hero-banner{
 display:grid;
 grid-template-columns:42% 58%;
 background:#0f172a;
