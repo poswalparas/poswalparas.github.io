@@ -14,7 +14,7 @@ Department of Physics
 National Institute of Technology Patna
 Patna, Bihar, India
 
-### Email
+### Email 
 
 [parasp.ph21.ph@nitp.ac.in](mailto:parasp.ph21.ph@nitp.ac.in)
 
