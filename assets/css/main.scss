@@ -112,3 +112,18 @@ background:#1f2937;
 font-size:3rem;
 margin:0;
 }
+.about-section{
+display:flex;
+align-items:center;
+gap:40px;
+margin:50px 0;
+}
+
+.about-photo img{
+width:250px;
+border-radius:20px;
+}
+
+.about-text{
+flex:1;
+}
