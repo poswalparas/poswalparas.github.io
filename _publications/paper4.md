@@ -7,6 +7,7 @@ date: 2026-05-12
 excerpt: ''
 venue: 'Physica Scripta'
 paperurl: 'https://academicpages.github.io/files/physica_2026.pdf'
+citation: 'Paras Poswal, Neeraj Shukla, Sheshamani Singh, Ram Kumar, Priya Singh, Rohit Tyagi, Sandeep Bari, Aditya Tiwari, Deepak Gupta, MK Tiwari, Aditya H Kelkar'
 ---
 
 Abstract
