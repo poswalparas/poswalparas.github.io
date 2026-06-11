@@ -6,7 +6,7 @@ permalink: /publication/zno_co_author1
 date: 2024-03-01
 excerpt: ''
 venue: 'Materials Chemistry and Physics'
-paperurl: 'https://academicpages.github.io/files/zno_2024_mcp.pdf'
+paperurl: 'https://poswalparas.github.io/files/zno_2024_mcp.pdf'
 citation: 'Sheshamani Singh, Paras Poswal, Balakrishnan Sundaravel, Sujay Chakravarty, Neeraj Shukla'
 ---
 
