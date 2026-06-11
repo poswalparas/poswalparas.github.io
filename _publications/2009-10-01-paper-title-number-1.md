@@ -1,7 +1,7 @@
 ---
 title: "Modulation of Spin Polarization and Magnetic Ordering in MSe2/WSe2 (M= 3d Transition Metal Atom) Structure: A First-Principles Study"
 collection: publications
-category: manuscripts
+category: manuscripts_first
 permalink: /publication/2009-10-01-paper-title-number-1
 date: 2025-06-17
 excerpt: ''
