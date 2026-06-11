@@ -7,6 +7,7 @@ date: 2026-05-15
 excerpt: ''
 venue: 'Surfaces and Interfaces'
 paperurl: 'https://academicpages.github.io/files/surface&interface_2026.pdf'
+citation: 'Paras Poswal and Neeraj Shukla'
 ---
 
 Abstract
