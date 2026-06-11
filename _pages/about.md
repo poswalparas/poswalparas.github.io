@@ -1,10 +1,11 @@
 ---
+layout: splash
 permalink: /
-title: "Paras Poswal"
-author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
+title: ""
+author_profile: false
+classes:
+  - wide
+  - landing
 ---
 <div class="hero-banner">
   <div class="hero-content">
