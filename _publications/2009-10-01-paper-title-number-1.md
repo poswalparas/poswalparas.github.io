@@ -6,7 +6,7 @@ permalink: /publication/2009-10-01-paper-title-number-1
 date: 2025-06-17
 excerpt: ''
 venue: 'The Journal of Physical Chemistry C'
-paperurl: 'https://academicpages.github.io/files/acs-2025.pdf'
+paperurl: 'https://poswalparas.github.io/files/acs-2025.pdf'
 citation: 'Paras Poswal, Sheshamani Singh, Astha Suman, Rohit Kumar, and Neeraj Shukla'
 ---
 
