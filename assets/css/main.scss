@@ -225,3 +225,24 @@ padding:0;
 .page__inner-wrap{
     max-width:100%;
 }
+/* =========================================
+   CUSTOM HOMEPAGE
+========================================= */
+
+.landing #main{
+    max-width:1700px;
+    width:96%;
+    margin:auto;
+}
+
+.landing .page{
+    width:100%;
+}
+
+.landing .page__inner-wrap{
+    max-width:100%;
+}
+
+.landing .page__content{
+    padding:0;
+}
