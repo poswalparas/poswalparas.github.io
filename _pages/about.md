@@ -83,7 +83,7 @@ My long-term goal is to understand and engineer magnetic and spin-dependent phen
 <div class="stats-grid">
 
 <div class="stat-box">
-<h2>6+</h2>
+<h2>6</h2>
 <p>Publications</p>
 </div>
 
@@ -92,10 +92,6 @@ My long-term goal is to understand and engineer magnetic and spin-dependent phen
 <p>First-Author Papers</p>
 </div>
 
-<div class="stat-box">
-<h2>DFT</h2>
-<p>Quantum ESPRESSO & WIEN2k</p>
-</div>
 
 <div class="stat-box">
 <h2>2D</h2>
