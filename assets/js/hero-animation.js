@@ -91,7 +91,48 @@ for(let i=0;i<TOTAL_PARTICLES;i++){
 // -------------------------------
 // Animation Loop
 // -------------------------------
+function drawConnections(){
 
+    const maxDistance = 80;
+
+    for(let i=0;i<particles.length;i++){
+
+        for(let j=i+1;j<particles.length;j++){
+
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+
+            const d = Math.sqrt(dx*dx + dy*dy);
+
+            if(d < maxDistance){
+
+                const alpha = (1 - d/maxDistance) * 0.25;
+
+                ctx.beginPath();
+
+                ctx.strokeStyle = `rgba(56,189,248,${alpha})`;
+
+                ctx.lineWidth = 1;
+
+                ctx.moveTo(
+                    particles[i].x,
+                    particles[i].y
+                );
+
+                ctx.lineTo(
+                    particles[j].x,
+                    particles[j].y
+                );
+
+                ctx.stroke();
+
+            }
+
+        }
+
+    }
+
+}
 function animate(){
 
     ctx.clearRect(0,0,canvas.width,canvas.height);
