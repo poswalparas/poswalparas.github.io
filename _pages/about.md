@@ -158,7 +158,7 @@ Explore Research →
 
 </div>
 
-</div>
+
 <section class="about-section">
 
 <div class="about-photo">
