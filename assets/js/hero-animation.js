@@ -1,3 +1,4 @@
+console.log("Hero animation loaded");
 /* ==========================================================
    Quantum Materials Hero Animation
    Part 1 - Engine Core
