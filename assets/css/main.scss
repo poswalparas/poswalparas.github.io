@@ -375,3 +375,64 @@ padding:0;
 .landing .page__content{
     padding:0;
 }
+/* ===================================
+   Quantum Particles
+=================================== */
+
+.particles{
+position:absolute;
+inset:0;
+overflow:hidden;
+pointer-events:none;
+z-index:1;
+}
+
+.particles span{
+
+position:absolute;
+
+width:6px;
+height:6px;
+
+background:#38bdf8;
+
+border-radius:50%;
+
+box-shadow:
+0 0 10px #38bdf8,
+0 0 20px #38bdf8;
+
+animation:particleFloat 18s linear infinite;
+
+opacity:.6;
+
+}
+
+.particles span:nth-child(1){left:8%;top:85%;animation-delay:0s;}
+.particles span:nth-child(2){left:18%;top:65%;animation-delay:2s;}
+.particles span:nth-child(3){left:28%;top:75%;animation-delay:5s;}
+.particles span:nth-child(4){left:38%;top:90%;animation-delay:1s;}
+.particles span:nth-child(5){left:50%;top:70%;animation-delay:7s;}
+.particles span:nth-child(6){left:62%;top:80%;animation-delay:3s;}
+.particles span:nth-child(7){left:74%;top:88%;animation-delay:9s;}
+.particles span:nth-child(8){left:82%;top:60%;animation-delay:6s;}
+.particles span:nth-child(9){left:90%;top:78%;animation-delay:4s;}
+.particles span:nth-child(10){left:96%;top:68%;animation-delay:8s;}
+
+@keyframes particleFloat{
+
+0%{
+transform:translateY(0px) scale(1);
+opacity:.2;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-180px) scale(1.6);
+opacity:0;
+}
+
+}
