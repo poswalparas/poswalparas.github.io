@@ -57,7 +57,7 @@ classes:
 
     <div class="hero-image">
 
-        <img src="/images/home/hero-bg.png" alt="Research">
+      <canvas id="heroCanvas"></canvas>
 
     </div>
 
