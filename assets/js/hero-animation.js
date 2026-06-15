@@ -254,13 +254,16 @@ function explode(){
 
 function drawBonds(){
 
-    const maxDistance = 36;
+    const maxDistance = 38;
+    const maxNeighbors = 3;
 
     ctx.lineWidth = 1.2;
 
     for(let i=0;i<particles.length;i++){
 
-        for(let j=i+1;j<particles.length;j++){
+    let neighbors = 0;
+
+    for(let j=i+1;j<particles.length;j++){
 
             const dx = particles[i].x - particles[j].x;
             const dy = particles[i].y - particles[j].y;
@@ -287,7 +290,13 @@ function drawBonds(){
                 );
 
                 ctx.stroke();
+neighbors++;
 
+if(neighbors>=maxNeighbors){
+
+    break;
+
+}
             }
 
         }
