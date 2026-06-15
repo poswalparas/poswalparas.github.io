@@ -145,7 +145,7 @@ function createHexagonalLattice(){
     }
 
 }
-
+createHexagonalLattice();
 // ==========================================
 // Animation
 // ==========================================
