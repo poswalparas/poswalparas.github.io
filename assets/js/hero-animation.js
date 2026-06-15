@@ -341,13 +341,13 @@ function drawBonds(){
     const maxDistance = 38;
     const maxNeighbors = 3;
 
-    ctx.lineWidth = 1.2;
+    ctx.lineWidth = 1.5;
 
     for(let i=0;i<particles.length;i++){
 
-    let neighbors = 0;
+        let neighbors = 0;
 
-    for(let j=i+1;j<particles.length;j++){
+        for(let j=i+1;j<particles.length;j++){
 
             const dx = particles[i].x - particles[j].x;
             const dy = particles[i].y - particles[j].y;
@@ -356,12 +356,40 @@ function drawBonds(){
 
             if(d < maxDistance){
 
-                ctx.beginPath();
+                const alpha = (1-d/maxDistance)*0.45;
 
-                ctx.strokeStyle =
-                    "rgba(100,210,255," +
-                    (1-d/maxDistance)*0.35 +
-                    ")";
+                const gradient = ctx.createLinearGradient(
+
+                    particles[i].x,
+                    particles[i].y,
+
+                    particles[j].x,
+                    particles[j].y
+
+                );
+
+                gradient.addColorStop(
+                    0,
+                    `rgba(255,255,255,${alpha*0.15})`
+                );
+
+                gradient.addColorStop(
+                    0.5,
+                    `rgba(90,210,255,${alpha})`
+                );
+
+                gradient.addColorStop(
+                    1,
+                    `rgba(255,255,255,${alpha*0.15})`
+                );
+
+                ctx.strokeStyle = gradient;
+
+                ctx.shadowBlur = 8;
+
+                ctx.shadowColor = "#55ccff";
+
+                ctx.beginPath();
 
                 ctx.moveTo(
                     particles[i].x,
@@ -374,18 +402,22 @@ function drawBonds(){
                 );
 
                 ctx.stroke();
-neighbors++;
 
-if(neighbors>=maxNeighbors){
+                neighbors++;
 
-    break;
+                if(neighbors>=maxNeighbors){
 
-}
+                    break;
+
+                }
+
             }
 
         }
 
     }
+
+    ctx.shadowBlur = 0;
 
 }
 // ==========================================
