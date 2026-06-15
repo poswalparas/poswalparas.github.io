@@ -208,6 +208,7 @@ const py =
     ctx.restore();
 
 }
+}
 
 // ==========================================
 // Create Particles
