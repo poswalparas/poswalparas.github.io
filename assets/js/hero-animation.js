@@ -210,7 +210,6 @@ function createHexagonalLattice(){
     }
 
 }
-}
 
 createHexagonalLattice();
 // ==========================================
@@ -238,10 +237,6 @@ function animate(){
     p.update();
 
 });
-function drawBonds(){
-
-}
-drawBonds();
 
 particles.forEach(p=>{
 
