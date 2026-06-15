@@ -57,7 +57,7 @@ classes:
 
     <div class="hero-image">
 
-      <canvas id="heroCanvas"></canvas>
+    <div id="heroCanvas"></div>
 
     </div>
 
@@ -104,27 +104,6 @@ I am a PhD Candidate in the Department of Physics at the National Institute of T
 
 My work combines density functional theory (DFT) calculations and ion-irradiation-driven experimental approaches to investigate magnetic anisotropy, exchange interactions, spin polarization, and defect-induced magnetism in low-dimensional materials. 
 
-## Research Interests
-
-* Spintronics
-* Two-Dimensional Magnetic Materials
-* First-Principles Calculations (DFT)
-* Magnetic Anisotropy Engineering
-* Janus Transition Metal Dichalcogenides
-* Defect Engineering
-* Topological Spin Physics
-* Interface and Proximity Effects
-
-## Current Position
-
-**PhD Candidate**
-Department of Physics
-National Institute of Technology Patna, India
-
-## Research Vision
-
-My long-term goal is to understand and engineer magnetic and spin-dependent phenomena in low-dimensional materials for next-generation spintronic and quantum technologies.
-<h2>Research at a Glance</h2>
 
 <div class="stats-grid">
 
@@ -145,3 +124,12 @@ My long-term goal is to understand and engineer magnetic and spin-dependent phen
 </div>
 
 </div>
+<script type="importmap">
+{
+  "imports": {
+    "three":"https://unpkg.com/three@0.165.0/build/three.module.js"
+  }
+}
+</script>
+
+<script type="module" src="/assets/js/hero-animation.js"></script>
