@@ -8,6 +8,20 @@ classes:
   - landing
 ---
 <div class="hero-banner">
+  <div class="particles">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+</div>
 
     <div class="hero-content">
 
@@ -48,6 +62,7 @@ classes:
     </div>
 
 </div> 
+
 
 ## Research Highlights
 
