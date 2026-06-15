@@ -127,46 +127,6 @@ for(let i=0;i<TOTAL;i++){
 
 function createHexagonalLattice(){
 
-    const a = 32;
-
-    const cols = 11;
-    const rows = 10;
-
-    let index = 0;
-
-    const centerX = canvas.width * 0.67;
-    const centerY = canvas.height * 0.50;
-
-    const totalWidth = (cols-1)*a + a/2;
-    const totalHeight = (rows-1)*Math.sqrt(3)/2*a;
-
-    const startX = centerX - totalWidth/2;
-    const startY = centerY - totalHeight/2;
-
-    for(let r=0;r<rows;r++){
-
-        for(let c=0;c<cols;c++){
-
-            if(index>=particles.length) return;
-
-            particles[index].tx =
-                startX +
-                c*a +
-                (r%2)*(a/2);
-
-            particles[index].ty =
-                startY +
-                r*(Math.sqrt(3)/2*a);
-
-            index++;
-
-        }
-
-    }
-
-}
-function createHexagonalLattice(){
-
     const a = 34;
 
     const cols = 8;
@@ -250,6 +210,9 @@ function createHexagonalLattice(){
     }
 
 }
+}
+
+createHexagonalLattice();
 // ==========================================
 // Animation
 // ==========================================
@@ -275,7 +238,9 @@ function animate(){
     p.update();
 
 });
+function drawBonds(){
 
+}
 drawBonds();
 
 particles.forEach(p=>{
