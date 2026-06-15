@@ -105,23 +105,57 @@ I am a PhD Candidate in the Department of Physics at the National Institute of T
 My work combines density functional theory (DFT) calculations and ion-irradiation-driven experimental approaches to investigate magnetic anisotropy, exchange interactions, spin polarization, and defect-induced magnetism in low-dimensional materials. 
 
 
+<section class="stats-section">
+
+<h2 class="section-title">
+Research at a Glance
+</h2>
+
 <div class="stats-grid">
 
-<div class="stat-box">
-<h2>6</h2>
-<p>Publications</p>
+<div class="stat-card">
+
+<div class="stat-number">6+</div>
+
+<div class="stat-title">
+Publications
 </div>
 
-<div class="stat-box">
-<h2>4</h2>
-<p>First-Author Papers</p>
 </div>
 
+<div class="stat-card">
 
-<div class="stat-box">
-<h2>2D</h2>
-<p>Spintronic Materials</p>
+<div class="stat-number">4</div>
+
+<div class="stat-title">
+First Author
 </div>
+
+</div>
+
+<div class="stat-card">
+
+<div class="stat-number">500+</div>
+
+<div class="stat-title">
+DFT Calculations
+</div>
+
+</div>
+
+<div class="stat-card">
+
+<div class="stat-number">6</div>
+
+<div class="stat-title">
+Research Areas
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 </div>
 <script type="importmap">
