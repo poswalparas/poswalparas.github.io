@@ -26,11 +26,11 @@ class Particle{
 
     constructor(){
 
-        this.x=Math.random()*canvas.width;
-        this.y=Math.random()*canvas.height;
+        px=Math.random()*canvas.width;
+        py=Math.random()*canvas.height;
 
-        this.tx=this.x;
-        this.ty=this.y;
+        this.tx=px;
+        this.ty=py;
 
         this.vx=0;
         this.vy=0;
@@ -39,6 +39,8 @@ class Particle{
 
         this.type = 0;
         this.color = "#55ccff";
+        this.phase = Math.random() * Math.PI * 2;
+        this.amp = 0.8 + Math.random() * 0.5;
 
     }
 
@@ -46,8 +48,8 @@ class Particle{
 
     if(mode=="assemble"){
 
-        let dx=this.tx-this.x;
-        let dy=this.ty-this.y;
+        let dx=this.tx-px;
+        let dy=this.ty-py;
 
         this.vx+=dx*0.015;
         this.vy+=dy*0.015;
@@ -64,13 +66,18 @@ class Particle{
     this.vx*=0.92;
     this.vy*=0.92;
 
-    this.x+=this.vx;
-    this.y+=this.vy;
+    px+=this.vx;
+    py+=this.vy;
 
 }
 
 draw(){
 
+    const t = performance.now() * 0.002;
+
+    const px = px + Math.cos(t + this.phase) * this.amp;
+    const py = py + Math.sin(t + this.phase) * this.amp;
+    
     let color;
 
     if(this.type==0){
@@ -102,8 +109,8 @@ draw(){
     ctx.fillStyle=color;
 
     ctx.arc(
-        this.x,
-        this.y,
+        px,
+        py,
         this.radius*4,
         0,
         Math.PI*2
@@ -120,8 +127,8 @@ draw(){
     ctx.beginPath();
 
     ctx.arc(
-        this.x,
-        this.y,
+        px,
+        py,
         this.radius*2.2,
         0,
         Math.PI*2
@@ -141,12 +148,12 @@ draw(){
 
     const gradient = ctx.createRadialGradient(
 
-        this.x-this.radius*0.35,
-        this.y-this.radius*0.35,
+        px-this.radius*0.35,
+        py-this.radius*0.35,
         this.radius*0.2,
 
-        this.x,
-        this.y,
+        px,
+        py,
         this.radius
 
     );
@@ -160,8 +167,8 @@ draw(){
     ctx.beginPath();
 
     ctx.arc(
-        this.x,
-        this.y,
+        px,
+        py,
         this.radius,
         0,
         Math.PI*2
@@ -181,9 +188,9 @@ draw(){
 
     ctx.arc(
 
-        this.x-this.radius*0.28,
+        px-this.radius*0.28,
 
-        this.y-this.radius*0.28,
+        py-this.radius*0.28,
 
         this.radius*0.25,
 
@@ -349,8 +356,22 @@ function drawBonds(){
 
         for(let j=i+1;j<particles.length;j++){
 
-            const dx = particles[i].x - particles[j].x;
-            const dy = particles[i].y - particles[j].y;
+            const t = performance.now()*0.002;
+
+const x1 = x1 +
+Math.cos(t+particles[i].phase)*particles[i].amp;
+
+const y1 = y1 +
+Math.sin(t+particles[i].phase)*particles[i].amp;
+
+const x2 = x2 +
+Math.cos(t+particles[j].phase)*particles[j].amp;
+
+const y2 = y2 +
+Math.sin(t+particles[j].phase)*particles[j].amp;
+
+const dx = x1-x2;
+const dy = y1-y2;
 
             const d = Math.sqrt(dx*dx + dy*dy);
 
@@ -360,11 +381,11 @@ function drawBonds(){
 
                 const gradient = ctx.createLinearGradient(
 
-                    particles[i].x,
-                    particles[i].y,
+                    x1,
+                    y1,
 
-                    particles[j].x,
-                    particles[j].y
+                    x2,
+                    y2
 
                 );
 
@@ -392,13 +413,13 @@ function drawBonds(){
                 ctx.beginPath();
 
                 ctx.moveTo(
-                    particles[i].x,
-                    particles[i].y
+                    x1,
+                    y1
                 );
 
                 ctx.lineTo(
-                    particles[j].x,
-                    particles[j].y
+                    x2,
+                    y2
                 );
 
                 ctx.stroke();
