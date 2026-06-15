@@ -261,6 +261,7 @@ Research Areas
 </div>
 
 </section>
+<!--
 <script type="importmap">
 {
   "imports": {
@@ -270,3 +271,4 @@ Research Areas
 </script>
 
 <script type="module" src="/assets/js/hero-animation.js"></script>
+-->
