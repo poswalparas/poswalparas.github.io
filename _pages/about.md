@@ -157,7 +157,7 @@ Explore Research →
 </div>
 
 </div>
-
+</div>
 
 <section class="about-section">
 
@@ -261,7 +261,6 @@ Research Areas
 </div>
 
 </section>
-</div>
 <script type="importmap">
 {
   "imports": {
