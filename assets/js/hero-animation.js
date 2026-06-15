@@ -228,8 +228,6 @@ function nextStructure(){
 
         createMoS2();
 
-    }
-
 }
 let mode = "assemble";
 
