@@ -218,12 +218,5 @@ Research Areas
 
 </section>
 
-<script type="importmap">
-{
-  "imports": {
-    "three":"https://unpkg.com/three@0.165.0/build/three.module.js"
-  }
-}
-</script>
-
-<script type="module" src="/assets/js/hero-animation.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r165/three.min.js"></script>
+<script src="/assets/js/hero-animation.js"></script>
