@@ -311,56 +311,48 @@ function animate(){
 
     requestAnimationFrame(animate);
 
-timer++;
+    timer++;
 
-if(mode=="assemble" && timer>260){
+    if(mode=="assemble" && timer>260){
 
-    explode();
+        explode();
 
-    mode="explode";
+        mode="explode";
 
-  timer++;
+        timer=0;
 
-if(mode=="assemble" && timer>260){
+    }
 
-    explode();
+    if(mode=="explode" && timer>150){
 
-    mode="explode";
+        nextStructure();
 
-    timer=0;
+        mode="assemble";
 
-}
+        timer=0;
 
-if(mode=="explode" && timer>150){
+    }
 
-    nextStructure();
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
 
-    mode="assemble";
+    particles.forEach(p=>{
 
-    timer=0;
+        p.update();
 
-}
+    });
 
-ctx.clearRect(
-    0,
-    0,
-    canvas.width,
-    canvas.height
-);
+    drawBonds();
 
-  particles.forEach(p=>{
+    particles.forEach(p=>{
 
-    p.update();
+        p.draw();
 
-});
-
-drawBonds();
-
-particles.forEach(p=>{
-
-    p.draw();
-
-});
+    });
 
 }
 
