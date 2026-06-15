@@ -361,17 +361,21 @@ function drawBonds(){
 
             const t = performance.now()*0.002;
 
-const x1 = x1 +
-Math.cos(t+particles[i].phase)*particles[i].amp;
+const x1 =
+    particles[i].x +
+    Math.cos(t + particles[i].phase) * particles[i].amp;
 
-const y1 = y1 +
-Math.sin(t+particles[i].phase)*particles[i].amp;
+const y1 =
+    particles[i].y +
+    Math.sin(t + particles[i].phase) * particles[i].amp;
 
-const x2 = x2 +
-Math.cos(t+particles[j].phase)*particles[j].amp;
+const x2 =
+    particles[j].x +
+    Math.cos(t + particles[j].phase) * particles[j].amp;
 
-const y2 = y2 +
-Math.sin(t+particles[j].phase)*particles[j].amp;
+const y2 =
+    particles[j].y +
+    Math.sin(t + particles[j].phase) * particles[j].amp;
 
 const dx = x1-x2;
 const dy = y1-y2;
