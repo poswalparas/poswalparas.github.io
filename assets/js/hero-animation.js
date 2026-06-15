@@ -132,11 +132,12 @@ for(let i=0;i<TOTAL;i++){
     );
 
 }
+let currentStructure = 0;
 // ==========================================
 // Hexagonal Crystal
 // ==========================================
 
-function createHexagonalLattice(){
+function createMoS2(){
 
     const a = 34;
 
@@ -222,7 +223,32 @@ function createHexagonalLattice(){
 
 }
 
-createHexagonalLattice();
+createMoS2();
+function nextStructure(){
+
+    currentStructure++;
+
+    currentStructure%=3;
+
+    if(currentStructure==0){
+
+        createMoS2();
+
+    }
+
+    else if(currentStructure==1){
+
+        createCrI3();
+
+    }
+
+    else{
+
+        createBorophene();
+
+    }
+
+}
 let mode = "assemble";
 
 let timer = 0;
@@ -292,7 +318,7 @@ if(mode=="assemble" && timer>260){
 
 if(mode=="explode" && timer>150){
 
-    createHexagonalLattice();
+    nextStructure();
 
     mode="assemble";
 
