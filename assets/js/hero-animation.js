@@ -226,12 +226,6 @@ function createMoS2(){
 createMoS2();
 function nextStructure(){
 
-    currentStructure++;
-
-    currentStructure%=3;
-
-    if(currentStructure==0){
-
         createMoS2();
 
     }
