@@ -66,35 +66,96 @@ classes:
 
 ## Research Highlights
 
-<div class="research-grid">
+<h2 class="section-title">Featured Research</h2>
 
-<div class="research-card">
+<div class="research-showcase">
 
-<img src="/images/home/cri3-card.png">
+<div class="research-item">
 
-<div class="card-overlay">
-<h3>2D Magnetism</h3>
-<p>CrI₃ • CrCl₃ • Exchange Coupling</p>
+<img src="/images/home/cri3-card.png" alt="CrI3">
+
+<div class="research-info">
+
+<h3>Two-Dimensional Magnetism</h3>
+
+<p>
+First-principles investigations of CrI₃, CrCl₃ and related
+van der Waals magnetic materials, focusing on exchange
+interaction, magnetic anisotropy and spintronic applications.
+</p>
+
+<a href="/publications/" class="research-link">
+Explore Research →
+</a>
+
 </div>
 
 </div>
 
-<div class="research-card">
-<img src="/images/home/janus-card.png">
-<h3>Janus TMDs</h3>
-<p>Spin polarization and spintronic applications.</p>
+<div class="research-item reverse">
+
+<img src="/images/home/janus-card.png" alt="Janus">
+
+<div class="research-info">
+
+<h3>Janus Quantum Materials</h3>
+
+<p>
+Spin polarization, Rashba splitting, Berry curvature,
+spin Hall conductivity and quantum transport in
+Janus transition-metal dichalcogenides.
+</p>
+
+<a href="/publications/" class="research-link">
+Explore Research →
+</a>
+
 </div>
 
-<div class="research-card">
-<img src="/images/home/borophene-card.png">
-<h3>Borophene</h3>
-<p>Electronic and magnetic properties of borophene derivatives.</p>
 </div>
 
-<div class="research-card">
-<img src="/images/home/irradiation-card.png">
-<h3>Irradiation Effects</h3>
-<p>Defect engineering and irradiation-induced magnetism.</p>
+<div class="research-item">
+
+<img src="/images/home/borophene-card.png" alt="Borophene">
+
+<div class="research-info">
+
+<h3>Borophene Physics</h3>
+
+<p>
+Electronic structure engineering, transition-metal
+adsorption and magnetism in borophene-based
+two-dimensional systems.
+</p>
+
+<a href="/publications/" class="research-link">
+Explore Research →
+</a>
+
+</div>
+
+</div>
+
+<div class="research-item reverse">
+
+<img src="/images/home/irradiation-card.png" alt="Irradiation">
+
+<div class="research-info">
+
+<h3>Defect Engineering</h3>
+
+<p>
+Ion irradiation, defect-induced magnetism and
+experimental characterization using Raman,
+XRD, XPS and VSM measurements.
+</p>
+
+<a href="/publications/" class="research-link">
+Explore Research →
+</a>
+
+</div>
+
 </div>
 
 </div>
