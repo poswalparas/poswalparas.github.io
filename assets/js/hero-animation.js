@@ -26,11 +26,11 @@ class Particle{
 
     constructor(){
 
-        px=Math.random()*canvas.width;
-        py=Math.random()*canvas.height;
+        this.x = Math.random()*canvas.width;
+        this.y = Math.random()*canvas.height;
 
-        this.tx=px;
-        this.ty=py;
+        this.tx = this.x;
+        this.ty = this.y;
 
         this.vx=0;
         this.vy=0;
@@ -48,8 +48,8 @@ class Particle{
 
     if(mode=="assemble"){
 
-        let dx=this.tx-px;
-        let dy=this.ty-py;
+        let dx = this.tx - this.x;
+        let dy = this.ty - this.y;
 
         this.vx+=dx*0.015;
         this.vy+=dy*0.015;
@@ -66,8 +66,8 @@ class Particle{
     this.vx*=0.92;
     this.vy*=0.92;
 
-    px+=this.vx;
-    py+=this.vy;
+    this.x += this.vx;
+    this.y += this.vy;
 
 }
 
@@ -75,8 +75,11 @@ draw(){
 
     const t = performance.now() * 0.002;
 
-    const px = px + Math.cos(t + this.phase) * this.amp;
-    const py = py + Math.sin(t + this.phase) * this.amp;
+    const px =
+    this.x + Math.cos(t + this.phase) * this.amp;
+
+const py =
+    this.y + Math.sin(t + this.phase) * this.amp;
     
     let color;
 
