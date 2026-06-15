@@ -26,7 +26,7 @@ classes:
     <div class="hero-content">
 
         <span class="hero-tag">
-            Computational Materials Scientist
+            Computational Condensed Matter Physicist
         </span>
 
         <h1>Paras Poswal</h1>
@@ -157,7 +157,6 @@ Research Areas
 
 </section>
 
-</div>
 <script type="importmap">
 {
   "imports": {
