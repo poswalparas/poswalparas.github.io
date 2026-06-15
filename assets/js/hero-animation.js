@@ -236,18 +236,6 @@ function nextStructure(){
 
     }
 
-    else if(currentStructure==1){
-
-        createCrI3();
-
-    }
-
-    else{
-
-        createBorophene();
-
-    }
-
 }
 let mode = "assemble";
 
@@ -331,6 +319,14 @@ if(mode=="assemble" && timer>260){
 
     mode="explode";
 
+  timer++;
+
+if(mode=="assemble" && timer>260){
+
+    explode();
+
+    mode="explode";
+
     timer=0;
 
 }
@@ -344,15 +340,13 @@ if(mode=="explode" && timer>150){
     timer=0;
 
 }
-        0,
 
-        0,
-
-        canvas.width,
-
-        canvas.height
-
-    );
+ctx.clearRect(
+    0,
+    0,
+    canvas.width,
+    canvas.height
+);
 
   particles.forEach(p=>{
 
