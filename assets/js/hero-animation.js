@@ -146,6 +146,49 @@ function createHexagonalLattice(){
 
 }
 createHexagonalLattice();
+function drawBonds(){
+
+    const maxDistance = 32;
+
+    ctx.lineWidth = 1.2;
+
+    for(let i=0;i<particles.length;i++){
+
+        for(let j=i+1;j<particles.length;j++){
+
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+
+            const d = Math.sqrt(dx*dx + dy*dy);
+
+            if(d < maxDistance){
+
+                ctx.beginPath();
+
+                ctx.strokeStyle =
+                    "rgba(90,190,255," +
+                    (1-d/maxDistance)*0.35 +
+                    ")";
+
+                ctx.moveTo(
+                    particles[i].x,
+                    particles[i].y
+                );
+
+                ctx.lineTo(
+                    particles[j].x,
+                    particles[j].y
+                );
+
+                ctx.stroke();
+
+            }
+
+        }
+
+    }
+
+}
 // ==========================================
 // Animation
 // ==========================================
@@ -166,13 +209,19 @@ function animate(){
 
     );
 
-    particles.forEach(p=>{
+   particles.forEach(p=>{
 
-        p.update();
+    p.update();
 
-        p.draw();
+});
 
-    });
+drawBonds();
+
+particles.forEach(p=>{
+
+    p.draw();
+
+});
 
 }
 
