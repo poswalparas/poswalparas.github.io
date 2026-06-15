@@ -104,7 +104,47 @@ for(let i=0;i<TOTAL;i++){
     );
 
 }
+// ==========================================
+// Hexagonal Crystal
+// ==========================================
 
+function createHexagonalLattice(){
+
+    const spacing = 28;
+
+    const cols = 13;
+    const rows = 11;
+
+    let index = 0;
+
+    const offsetX = canvas.width * 0.53;
+    const offsetY = canvas.height * 0.18;
+
+    for(let r=0;r<rows;r++){
+
+        for(let c=0;c<cols;c++){
+
+            if(index >= particles.length) return;
+
+            const x =
+                offsetX +
+                c * spacing +
+                (r % 2) * (spacing / 2);
+
+            const y =
+                offsetY +
+                r * spacing * 0.86;
+
+            particles[index].tx = x;
+            particles[index].ty = y;
+
+            index++;
+
+        }
+
+    }
+
+}
 
 // ==========================================
 // Animation
