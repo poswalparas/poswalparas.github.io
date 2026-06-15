@@ -80,24 +80,26 @@ draw(){
     }
     else if(this.type==1){
 
-        color="#C084FC";      // Top layer
+        color="#C084FC";      // Upper atom
 
     }
     else{
 
-        color="#FACC15";      // Bottom layer
+        color="#FACC15";      // Lower atom
 
     }
 
-    //------------------------------------------------
+    // ==========================
     // Outer glow
-    //------------------------------------------------
+    // ==========================
+
+    ctx.save();
+
+    ctx.globalAlpha=0.12;
 
     ctx.beginPath();
 
     ctx.fillStyle=color;
-
-    ctx.globalAlpha=0.12;
 
     ctx.arc(
         this.x,
@@ -109,37 +111,53 @@ draw(){
 
     ctx.fill();
 
-    //------------------------------------------------
+    // ==========================
     // Middle glow
-    //------------------------------------------------
+    // ==========================
+
+    ctx.globalAlpha=0.30;
 
     ctx.beginPath();
-
-    ctx.globalAlpha=0.35;
 
     ctx.arc(
         this.x,
         this.y,
-        this.radius*2.3,
+        this.radius*2.2,
         0,
         Math.PI*2
     );
 
     ctx.fill();
 
-    //------------------------------------------------
-    // Atom
-    //------------------------------------------------
-
-    ctx.beginPath();
+    // ==========================
+    // Main atom
+    // ==========================
 
     ctx.globalAlpha=1;
 
-    ctx.shadowBlur=25;
+    ctx.shadowBlur=20;
 
     ctx.shadowColor=color;
 
-    ctx.fillStyle=color;
+    const gradient = ctx.createRadialGradient(
+
+        this.x-this.radius*0.35,
+        this.y-this.radius*0.35,
+        this.radius*0.2,
+
+        this.x,
+        this.y,
+        this.radius
+
+    );
+
+    gradient.addColorStop(0,"#ffffff");
+    gradient.addColorStop(0.25,color);
+    gradient.addColorStop(1,"#0b1220");
+
+    ctx.fillStyle=gradient;
+
+    ctx.beginPath();
 
     ctx.arc(
         this.x,
@@ -151,28 +169,35 @@ draw(){
 
     ctx.fill();
 
-    //------------------------------------------------
-    // Highlight
-    //------------------------------------------------
+    // ==========================
+    // Specular highlight
+    // ==========================
+
+    ctx.shadowBlur=0;
 
     ctx.beginPath();
 
-    ctx.fillStyle="rgba(255,255,255,0.85)";
+    ctx.fillStyle="rgba(255,255,255,0.75)";
 
     ctx.arc(
-        this.x-this.radius*0.35,
-        this.y-this.radius*0.35,
-        this.radius*0.28,
+
+        this.x-this.radius*0.28,
+
+        this.y-this.radius*0.28,
+
+        this.radius*0.25,
+
         0,
+
         Math.PI*2
+
     );
 
     ctx.fill();
 
-    ctx.globalAlpha=1;
+    ctx.restore();
 
 }
-
 
 // ==========================================
 // Create Particles
