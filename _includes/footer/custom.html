@@ -1,14 +1,24 @@
 <!-- start custom footer snippets -->
 
-<!-- Support for MatJax -->
+<!-- MathJax -->
 <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
 
-<!-- Support for Mermaid -->
+<!-- Mermaid -->
 <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({startOnLoad:true, theme:'default'});
-    await mermaid.run({querySelector:'code.language-mermaid'});
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+mermaid.initialize({
+    startOnLoad:true,
+    theme:'default'
+});
+
+await mermaid.run({
+    querySelector:'code.language-mermaid'
+});
 </script>
+
+<!-- Hero Animation -->
+<script src="/assets/js/hero-animation.js"></script>
 
 <!-- end custom footer snippets -->
