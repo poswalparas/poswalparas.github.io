@@ -96,16 +96,20 @@ function animate(){
 
     ctx.clearRect(0,0,canvas.width,canvas.height);
 
+    // Update particles
     particles.forEach(p=>{
-
         p.update();
+    });
 
+    // Draw bonds first
+    drawConnections();
+
+    // Draw particles on top
+    particles.forEach(p=>{
         p.draw();
-
     });
 
     requestAnimationFrame(animate);
 
 }
-
 animate();
