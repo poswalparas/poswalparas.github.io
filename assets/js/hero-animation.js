@@ -42,7 +42,9 @@ class Particle{
 
     }
 
-    update(){
+   update(){
+
+    if(mode=="assemble"){
 
         let dx=this.tx-this.x;
         let dy=this.ty-this.y;
@@ -50,13 +52,22 @@ class Particle{
         this.vx+=dx*0.015;
         this.vy+=dy*0.015;
 
-        this.vx*=0.92;
-        this.vy*=0.92;
+    }
 
-        this.x+=this.vx;
-        this.y+=this.vy;
+    else{
+
+        this.vx*=1.002;
+        this.vy*=1.002;
 
     }
+
+    this.vx*=0.92;
+    this.vy*=0.92;
+
+    this.x+=this.vx;
+    this.y+=this.vy;
+
+}
 
     draw(){
 
@@ -212,6 +223,9 @@ function createHexagonalLattice(){
 }
 
 createHexagonalLattice();
+let mode = "assemble";
+
+let timer = 0;
 function drawBonds(){
 
     const maxDistance = 36;
@@ -264,7 +278,27 @@ function animate(){
     requestAnimationFrame(animate);
 
     ctx.clearRect(
+timer++;
 
+if(mode=="assemble" && timer>260){
+
+    explode();
+
+    mode="explode";
+
+    timer=0;
+
+}
+
+if(mode=="explode" && timer>150){
+
+    createHexagonalLattice();
+
+    mode="assemble";
+
+    timer=0;
+
+}
         0,
 
         0,
@@ -280,7 +314,21 @@ function animate(){
     p.update();
 
 });
+function explode(){
 
+    particles.forEach(p=>{
+
+        const angle=Math.random()*Math.PI*2;
+
+        const speed=4+Math.random()*3;
+
+        p.vx=Math.cos(angle)*speed;
+
+        p.vy=Math.sin(angle)*speed;
+
+    });
+
+}
 drawBonds();
 
 particles.forEach(p=>{
