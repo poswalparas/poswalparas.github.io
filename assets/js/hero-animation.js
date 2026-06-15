@@ -37,7 +37,8 @@ class Particle{
 
         this.radius=2+Math.random()*1.5;
 
-        this.color="#55ccff";
+        this.type = 0;
+        this.color = "#55ccff";
 
     }
 
@@ -148,44 +149,85 @@ function createHexagonalLattice(){
     }
 
 }
-createHexagonalLattice();
-function drawBonds(){
+function createHexagonalLattice(){
 
-    const maxDistance = 32;
+    const a = 34;
 
-    ctx.lineWidth = 1.2;
+    const cols = 8;
+    const rows = 7;
 
-    for(let i=0;i<particles.length;i++){
+    let index = 0;
 
-        for(let j=i+1;j<particles.length;j++){
+    const cx = canvas.width*0.68;
+    const cy = canvas.height*0.50;
 
-            const dx = particles[i].x - particles[j].x;
-            const dy = particles[i].y - particles[j].y;
+    const startX = cx - cols*a*0.55;
+    const startY = cy - rows*a*0.45;
 
-            const d = Math.sqrt(dx*dx + dy*dy);
+    for(let r=0;r<rows;r++){
 
-            if(d < maxDistance){
+        for(let c=0;c<cols;c++){
 
-                ctx.beginPath();
+            if(index>=particles.length) return;
 
-                ctx.strokeStyle =
-                    "rgba(90,190,255," +
-                    (1-d/maxDistance)*0.35 +
-                    ")";
+            //------------------------
+            // Metal atom
+            //------------------------
 
-                ctx.moveTo(
-                    particles[i].x,
-                    particles[i].y
-                );
+            particles[index].tx =
+                startX +
+                c*a +
+                (r%2)*(a/2);
 
-                ctx.lineTo(
-                    particles[j].x,
-                    particles[j].y
-                );
+            particles[index].ty =
+                startY +
+                r*a*0.86;
 
-                ctx.stroke();
+            particles[index].type=0;
 
-            }
+            index++;
+
+            if(index>=particles.length) return;
+
+            //------------------------
+            // Upper atom
+            //------------------------
+
+            particles[index].tx =
+                startX +
+                c*a +
+                (r%2)*(a/2) +
+                a*0.5;
+
+            particles[index].ty =
+                startY +
+                r*a*0.86 -
+                a*0.28;
+
+            particles[index].type=1;
+
+            index++;
+
+            if(index>=particles.length) return;
+
+            //------------------------
+            // Lower atom
+            //------------------------
+
+            particles[index].tx =
+                startX +
+                c*a +
+                (r%2)*(a/2) +
+                a*0.5;
+
+            particles[index].ty =
+                startY +
+                r*a*0.86 +
+                a*0.28;
+
+            particles[index].type=2;
+
+            index++;
 
         }
 
