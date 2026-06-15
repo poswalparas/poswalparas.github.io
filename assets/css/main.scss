@@ -241,99 +241,169 @@ box-shadow:
     height:420px;
     display:block;
 }
-<h2 class="section-title">Featured Research</h2>
+.research-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+}
 
-<div class="research-showcase">
+.research-card{
+position:relative;
+border-radius:20px;
+overflow:hidden;
+background:#111827;
+transition:all .3s ease;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
 
-<div class="research-item">
+.research-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
 
-<img src="/images/home/cri3-card.png" alt="CrI3">
+.research-card img{
+width:100%;
+height:260px;
+object-fit:cover;
+display:block;
+}
 
-<div class="research-info">
+.research-card h3{
+font-size:1.4rem;
+font-weight:700;
+padding:20px 20px 5px;
+margin:0;
+}
 
-<h3>Two-Dimensional Magnetism</h3>
+.research-card p{
+padding:0 20px 20px;
+margin:0;
+font-size:1rem;
+line-height:1.6;
+}
+/* ===========================
+   Statistics
+=========================== */
 
-<p>
-First-principles investigations of CrI₃, CrCl₃ and related
-van der Waals magnetic materials, focusing on exchange
-interaction, magnetic anisotropy and spintronic applications.
-</p>
+.stats-section{
 
-<a href="/publications/" class="research-link">
-Explore Research →
-</a>
+margin:70px 0;
 
-</div>
+}
 
-</div>
+.section-title{
 
-<div class="research-item reverse">
+text-align:center;
 
-<img src="/images/home/janus-card.png" alt="Janus">
+font-size:2.4rem;
 
-<div class="research-info">
+margin-bottom:45px;
 
-<h3>Janus Quantum Materials</h3>
+font-weight:700;
 
-<p>
-Spin polarization, Rashba splitting, Berry curvature,
-spin Hall conductivity and quantum transport in
-Janus transition-metal dichalcogenides.
-</p>
+}
 
-<a href="/publications/" class="research-link">
-Explore Research →
-</a>
+.stats-grid{
 
-</div>
+display:grid;
 
-</div>
+grid-template-columns:repeat(4,1fr);
 
-<div class="research-item">
+gap:25px;
 
-<img src="/images/home/borophene-card.png" alt="Borophene">
+}
 
-<div class="research-info">
+.stat-card{
 
-<h3>Borophene Physics</h3>
+background:linear-gradient(
+145deg,
+#101827,
+#172135
+);
 
-<p>
-Electronic structure engineering, transition-metal
-adsorption and magnetism in borophene-based
-two-dimensional systems.
-</p>
+border-radius:18px;
 
-<a href="/publications/" class="research-link">
-Explore Research →
-</a>
+padding:35px;
 
-</div>
+text-align:center;
 
-</div>
+transition:.35s;
 
-<div class="research-item reverse">
+border:1px solid rgba(255,255,255,.05);
 
-<img src="/images/home/irradiation-card.png" alt="Irradiation">
+}
 
-<div class="research-info">
+.stat-card:hover{
 
-<h3>Defect Engineering</h3>
+transform:translateY(-8px);
 
-<p>
-Ion irradiation, defect-induced magnetism and
-experimental characterization using Raman,
-XRD, XPS and VSM measurements.
-</p>
+box-shadow:
+0 20px 45px rgba(14,165,233,.18);
 
-<a href="/publications/" class="research-link">
-Explore Research →
-</a>
+}
 
-</div>
+.stat-number{
 
-</div>
+font-size:3rem;
 
-</div>
+font-weight:800;
+
+color:#38bdf8;
+
+margin-bottom:10px;
+
+}
+
+.stat-title{
+
+font-size:1rem;
+
+color:#cbd5e1;
+
+letter-spacing:.5px;
+
+}
+.about-section{
+display:flex;
+align-items:center;
+gap:40px;
+margin:50px 0;
+}
+
+.about-photo img{
+width:250px;
+border-radius:20px;
+}
+
+.about-text{
+flex:1;
+}
+.card-overlay{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+padding:25px;
+background:linear-gradient(
+to top,
+rgba(0,0,0,0.9),
+rgba(0,0,0,0.4),
+transparent
+);
+}
+
+.card-overlay h3{
+color:white;
+margin:0 0 10px 0;
+padding:0;
+}
+
+.card-overlay p{
+color:white;
+margin:0;
+padding:0;
+}
+
 /* =========================================
    CUSTOM HOMEPAGE
 ========================================= */
@@ -414,117 +484,5 @@ opacity:1;
 transform:translateY(-180px) scale(1.6);
 opacity:0;
 }
-
-}
-/* =====================================
-ABOUT
-===================================== */
-
-.about-section{
-
-display:grid;
-
-grid-template-columns:300px 1fr;
-
-gap:60px;
-
-align-items:center;
-
-margin:100px 0;
-
-}
-
-.about-photo img{
-
-width:300px;
-
-border-radius:24px;
-
-box-shadow:
-0 20px 60px rgba(0,0,0,.3);
-
-}
-
-.about-tag{
-
-display:inline-block;
-
-padding:6px 15px;
-
-background:#10203c;
-
-color:#38bdf8;
-
-border-radius:30px;
-
-font-size:.8rem;
-
-letter-spacing:1px;
-
-margin-bottom:15px;
-
-}
-
-.about-content h2{
-
-font-size:3rem;
-
-margin-bottom:10px;
-
-}
-
-.about-content h4{
-
-font-size:1.3rem;
-
-color:#38bdf8;
-
-margin-bottom:25px;
-
-}
-
-.about-content p{
-
-font-size:1.05rem;
-
-line-height:1.9;
-
-color:#cbd5e1;
-
-max-width:800px;
-
-}
-
-.about-links{
-
-margin-top:30px;
-
-display:flex;
-
-gap:15px;
-
-flex-wrap:wrap;
-
-}
-
-.about-links a{
-
-padding:12px 22px;
-
-border-radius:40px;
-
-background:#0ea5e9;
-
-color:white;
-
-text-decoration:none;
-
-transition:.3s;
-
-}
-
-.about-links a:hover{
-
-transform:translateY(-4px);
 
 }
