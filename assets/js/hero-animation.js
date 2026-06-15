@@ -252,6 +252,26 @@ function nextStructure(){
 let mode = "assemble";
 
 let timer = 0;
+// ==============================
+// Explosion
+// ==============================
+
+function explode(){
+
+    particles.forEach(p=>{
+
+        const angle = Math.random()*Math.PI*2;
+
+        const speed = 4 + Math.random()*3;
+
+        p.vx = Math.cos(angle)*speed;
+
+        p.vy = Math.sin(angle)*speed;
+
+    });
+
+}
+
 function drawBonds(){
 
     const maxDistance = 36;
@@ -303,7 +323,6 @@ function animate(){
 
     requestAnimationFrame(animate);
 
-    ctx.clearRect(
 timer++;
 
 if(mode=="assemble" && timer>260){
@@ -340,21 +359,7 @@ if(mode=="explode" && timer>150){
     p.update();
 
 });
-function explode(){
 
-    particles.forEach(p=>{
-
-        const angle=Math.random()*Math.PI*2;
-
-        const speed=4+Math.random()*3;
-
-        p.vx=Math.cos(angle)*speed;
-
-        p.vy=Math.sin(angle)*speed;
-
-    });
-
-}
 drawBonds();
 
 particles.forEach(p=>{
