@@ -44,7 +44,7 @@ classes:
 
     <div class="hero-image">
 
-    <div id="heroCanvas"></div>
+    <canvas id="heroCanvas"></canvas>
 
     </div>
 
