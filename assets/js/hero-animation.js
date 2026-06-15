@@ -26,11 +26,11 @@ class Particle{
 
     constructor(){
 
-        this.x = Math.random()*canvas.width;
-        this.y = Math.random()*canvas.height;
+        this.x=Math.random()*canvas.width;
+        this.y=Math.random()*canvas.height;
 
-        this.tx = this.x;
-        this.ty = this.y;
+        this.tx=this.x;
+        this.ty=this.y;
 
         this.vx=0;
         this.vy=0;
@@ -39,8 +39,6 @@ class Particle{
 
         this.type = 0;
         this.color = "#55ccff";
-        this.phase = Math.random() * Math.PI * 2;
-        this.amp = 0.8 + Math.random() * 0.5;
 
     }
 
@@ -48,8 +46,8 @@ class Particle{
 
     if(mode=="assemble"){
 
-        let dx = this.tx - this.x;
-        let dy = this.ty - this.y;
+        let dx=this.tx-this.x;
+        let dy=this.ty-this.y;
 
         this.vx+=dx*0.015;
         this.vy+=dy*0.015;
@@ -66,149 +64,56 @@ class Particle{
     this.vx*=0.92;
     this.vy*=0.92;
 
-    this.x += this.vx;
-    this.y += this.vy;
+    this.x+=this.vx;
+    this.y+=this.vy;
 
 }
 
-draw(){
+    draw(){
 
-    const t = performance.now() * 0.002;
+        ctx.beginPath();
 
-    const px =
-    this.x + Math.cos(t + this.phase) * this.amp;
+       if(this.type==0){
 
-const py =
-    this.y + Math.sin(t + this.phase) * this.amp;
-    
-    let color;
-
-    if(this.type==0){
-
-        color="#4FC3F7";      // Metal
-
-    }
-    else if(this.type==1){
-
-        color="#C084FC";      // Upper atom
-
-    }
-    else{
-
-        color="#FACC15";      // Lower atom
-
-    }
-
-    // ==========================
-    // Outer glow
-    // ==========================
-
-    ctx.save();
-
-    ctx.globalAlpha=0.12;
-
-    ctx.beginPath();
-
-    ctx.fillStyle=color;
-
-    ctx.arc(
-        px,
-        py,
-        this.radius*4,
-        0,
-        Math.PI*2
-    );
-
-    ctx.fill();
-
-    // ==========================
-    // Middle glow
-    // ==========================
-
-    ctx.globalAlpha=0.30;
-
-    ctx.beginPath();
-
-    ctx.arc(
-        px,
-        py,
-        this.radius*2.2,
-        0,
-        Math.PI*2
-    );
-
-    ctx.fill();
-
-    // ==========================
-    // Main atom
-    // ==========================
-
-    ctx.globalAlpha=1;
-
-    ctx.shadowBlur=20;
-
-    ctx.shadowColor=color;
-
-    const gradient = ctx.createRadialGradient(
-
-        px-this.radius*0.35,
-        py-this.radius*0.35,
-        this.radius*0.2,
-
-        px,
-        py,
-        this.radius
-
-    );
-
-    gradient.addColorStop(0,"#ffffff");
-    gradient.addColorStop(0.25,color);
-    gradient.addColorStop(1,"#0b1220");
-
-    ctx.fillStyle=gradient;
-
-    ctx.beginPath();
-
-    ctx.arc(
-        px,
-        py,
-        this.radius,
-        0,
-        Math.PI*2
-    );
-
-    ctx.fill();
-
-    // ==========================
-    // Specular highlight
-    // ==========================
-
-    ctx.shadowBlur=0;
-
-    ctx.beginPath();
-
-    ctx.fillStyle="rgba(255,255,255,0.75)";
-
-    ctx.arc(
-
-        px-this.radius*0.28,
-
-        py-this.radius*0.28,
-
-        this.radius*0.25,
-
-        0,
-
-        Math.PI*2
-
-    );
-
-    ctx.fill();
-
-    ctx.restore();
+    ctx.fillStyle="#4FC3F7";
 
 }
+
+else if(this.type==1){
+
+    ctx.fillStyle="#C084FC";
+
 }
+
+else{
+
+    ctx.fillStyle="#FACC15";
+
+}
+
+        ctx.shadowBlur=18;
+        ctx.shadowColor=ctx.fillStyle;
+
+        ctx.arc(
+
+            this.x,
+
+            this.y,
+
+            this.radius,
+
+            0,
+
+            Math.PI*2
+
+        );
+
+        ctx.fill();
+
+    }
+
+}
+
 
 // ==========================================
 // Create Particles
@@ -349,104 +254,45 @@ function explode(){
 
 function drawBonds(){
 
-    const maxDistance = 38;
-    const maxNeighbors = 3;
+    const maxDistance = 36;
 
-    ctx.lineWidth = 1.5;
+    ctx.lineWidth = 1.2;
 
     for(let i=0;i<particles.length;i++){
 
-        let neighbors = 0;
-
         for(let j=i+1;j<particles.length;j++){
 
-            const t = performance.now()*0.002;
-
-const x1 =
-    particles[i].x +
-    Math.cos(t + particles[i].phase) * particles[i].amp;
-
-const y1 =
-    particles[i].y +
-    Math.sin(t + particles[i].phase) * particles[i].amp;
-
-const x2 =
-    particles[j].x +
-    Math.cos(t + particles[j].phase) * particles[j].amp;
-
-const y2 =
-    particles[j].y +
-    Math.sin(t + particles[j].phase) * particles[j].amp;
-
-const dx = x1-x2;
-const dy = y1-y2;
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
 
             const d = Math.sqrt(dx*dx + dy*dy);
 
             if(d < maxDistance){
 
-                const alpha = (1-d/maxDistance)*0.45;
-
-                const gradient = ctx.createLinearGradient(
-
-                    x1,
-                    y1,
-
-                    x2,
-                    y2
-
-                );
-
-                gradient.addColorStop(
-                    0,
-                    `rgba(255,255,255,${alpha*0.15})`
-                );
-
-                gradient.addColorStop(
-                    0.5,
-                    `rgba(90,210,255,${alpha})`
-                );
-
-                gradient.addColorStop(
-                    1,
-                    `rgba(255,255,255,${alpha*0.15})`
-                );
-
-                ctx.strokeStyle = gradient;
-
-                ctx.shadowBlur = 8;
-
-                ctx.shadowColor = "#55ccff";
-
                 ctx.beginPath();
 
+                ctx.strokeStyle =
+                    "rgba(100,210,255," +
+                    (1-d/maxDistance)*0.35 +
+                    ")";
+
                 ctx.moveTo(
-                    x1,
-                    y1
+                    particles[i].x,
+                    particles[i].y
                 );
 
                 ctx.lineTo(
-                    x2,
-                    y2
+                    particles[j].x,
+                    particles[j].y
                 );
 
                 ctx.stroke();
-
-                neighbors++;
-
-                if(neighbors>=maxNeighbors){
-
-                    break;
-
-                }
 
             }
 
         }
 
     }
-
-    ctx.shadowBlur = 0;
 
 }
 // ==========================================
