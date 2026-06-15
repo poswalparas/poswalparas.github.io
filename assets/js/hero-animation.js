@@ -62,10 +62,26 @@ class Particle{
 
         ctx.beginPath();
 
-        ctx.fillStyle=this.color;
+       if(this.type==0){
+
+    ctx.fillStyle="#4FC3F7";
+
+}
+
+else if(this.type==1){
+
+    ctx.fillStyle="#C084FC";
+
+}
+
+else{
+
+    ctx.fillStyle="#FACC15";
+
+}
 
         ctx.shadowBlur=18;
-        ctx.shadowColor=this.color;
+        ctx.shadowColor=ctx.fillStyle;
 
         ctx.arc(
 
