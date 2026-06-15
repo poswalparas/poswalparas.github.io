@@ -241,169 +241,99 @@ box-shadow:
     height:420px;
     display:block;
 }
-.research-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:25px;
-}
+<h2 class="section-title">Featured Research</h2>
 
-.research-card{
-position:relative;
-border-radius:20px;
-overflow:hidden;
-background:#111827;
-transition:all .3s ease;
-box-shadow:0 8px 20px rgba(0,0,0,.25);
-}
+<div class="research-showcase">
 
-.research-card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 35px rgba(0,0,0,.35);
-}
+<div class="research-item">
 
-.research-card img{
-width:100%;
-height:260px;
-object-fit:cover;
-display:block;
-}
+<img src="/images/home/cri3-card.png" alt="CrI3">
 
-.research-card h3{
-font-size:1.4rem;
-font-weight:700;
-padding:20px 20px 5px;
-margin:0;
-}
+<div class="research-info">
 
-.research-card p{
-padding:0 20px 20px;
-margin:0;
-font-size:1rem;
-line-height:1.6;
-}
-/* ===========================
-   Statistics
-=========================== */
+<h3>Two-Dimensional Magnetism</h3>
 
-.stats-section{
+<p>
+First-principles investigations of CrI₃, CrCl₃ and related
+van der Waals magnetic materials, focusing on exchange
+interaction, magnetic anisotropy and spintronic applications.
+</p>
 
-margin:70px 0;
+<a href="/publications/" class="research-link">
+Explore Research →
+</a>
 
-}
+</div>
 
-.section-title{
+</div>
 
-text-align:center;
+<div class="research-item reverse">
 
-font-size:2.4rem;
+<img src="/images/home/janus-card.png" alt="Janus">
 
-margin-bottom:45px;
+<div class="research-info">
 
-font-weight:700;
+<h3>Janus Quantum Materials</h3>
 
-}
+<p>
+Spin polarization, Rashba splitting, Berry curvature,
+spin Hall conductivity and quantum transport in
+Janus transition-metal dichalcogenides.
+</p>
 
-.stats-grid{
+<a href="/publications/" class="research-link">
+Explore Research →
+</a>
 
-display:grid;
+</div>
 
-grid-template-columns:repeat(4,1fr);
+</div>
 
-gap:25px;
+<div class="research-item">
 
-}
+<img src="/images/home/borophene-card.png" alt="Borophene">
 
-.stat-card{
+<div class="research-info">
 
-background:linear-gradient(
-145deg,
-#101827,
-#172135
-);
+<h3>Borophene Physics</h3>
 
-border-radius:18px;
+<p>
+Electronic structure engineering, transition-metal
+adsorption and magnetism in borophene-based
+two-dimensional systems.
+</p>
 
-padding:35px;
+<a href="/publications/" class="research-link">
+Explore Research →
+</a>
 
-text-align:center;
+</div>
 
-transition:.35s;
+</div>
 
-border:1px solid rgba(255,255,255,.05);
+<div class="research-item reverse">
 
-}
+<img src="/images/home/irradiation-card.png" alt="Irradiation">
 
-.stat-card:hover{
+<div class="research-info">
 
-transform:translateY(-8px);
+<h3>Defect Engineering</h3>
 
-box-shadow:
-0 20px 45px rgba(14,165,233,.18);
+<p>
+Ion irradiation, defect-induced magnetism and
+experimental characterization using Raman,
+XRD, XPS and VSM measurements.
+</p>
 
-}
+<a href="/publications/" class="research-link">
+Explore Research →
+</a>
 
-.stat-number{
+</div>
 
-font-size:3rem;
+</div>
 
-font-weight:800;
-
-color:#38bdf8;
-
-margin-bottom:10px;
-
-}
-
-.stat-title{
-
-font-size:1rem;
-
-color:#cbd5e1;
-
-letter-spacing:.5px;
-
-}
-.about-section{
-display:flex;
-align-items:center;
-gap:40px;
-margin:50px 0;
-}
-
-.about-photo img{
-width:250px;
-border-radius:20px;
-}
-
-.about-text{
-flex:1;
-}
-.card-overlay{
-position:absolute;
-bottom:0;
-left:0;
-width:100%;
-padding:25px;
-background:linear-gradient(
-to top,
-rgba(0,0,0,0.9),
-rgba(0,0,0,0.4),
-transparent
-);
-}
-
-.card-overlay h3{
-color:white;
-margin:0 0 10px 0;
-padding:0;
-}
-
-.card-overlay p{
-color:white;
-margin:0;
-padding:0;
-}
-
+</div>
 /* =========================================
    CUSTOM HOMEPAGE
 ========================================= */
