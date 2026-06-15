@@ -8,31 +8,46 @@ classes:
   - landing
 ---
 <div class="hero-banner">
-  <div class="hero-content">
 
-<h1>Paras Poswal</h1>
+    <div class="hero-content">
 
-<h3>
-Computational Materials Scientist
-</h3>
+        <span class="hero-tag">
+            Computational Materials Scientist
+        </span>
 
-<p>
-PhD Candidate at NIT Patna working on spintronics,
-two-dimensional magnetic materials, first-principles
-simulations, and defect-engineered quantum materials.
-</p>
+        <h1>Paras Poswal</h1>
 
-<div class="hero-buttons">
-<a href="/publications/" class="btn btn--primary">Publications</a>
-<a href="/contact/" class="btn btn--info">Contact</a>
-</div>
+        <h2>
+            Engineering Magnetism and Spin Polarization
+            in Two-Dimensional Quantum Materials
+        </h2>
 
-  </div>
-  <div class="hero-image">
-    <img src="/images/home/hero-bg.png" alt="Research">
-  </div>
+        <p>
+            First-principles simulations, spintronics, quantum materials,
+            magnetic anisotropy, Janus TMDs, borophene and defect engineering.
+        </p>
 
-</div>
+        <div class="hero-buttons">
+
+            <a href="/publications/" class="hero-btn primary">
+                Publications
+            </a>
+
+            <a href="/contact/" class="hero-btn secondary">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="/images/home/hero-bg.png" alt="Research">
+
+    </div>
+
+</div> 
 
 ## Research Highlights
 
