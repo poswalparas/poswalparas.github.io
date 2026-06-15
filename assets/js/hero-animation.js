@@ -110,33 +110,36 @@ for(let i=0;i<TOTAL;i++){
 
 function createHexagonalLattice(){
 
-    const spacing = 28;
+    const a = 32;
 
-    const cols = 13;
-    const rows = 11;
+    const cols = 11;
+    const rows = 10;
 
     let index = 0;
 
-    const offsetX = canvas.width * 0.53;
-    const offsetY = canvas.height * 0.18;
+    const centerX = canvas.width * 0.67;
+    const centerY = canvas.height * 0.50;
+
+    const totalWidth = (cols-1)*a + a/2;
+    const totalHeight = (rows-1)*Math.sqrt(3)/2*a;
+
+    const startX = centerX - totalWidth/2;
+    const startY = centerY - totalHeight/2;
 
     for(let r=0;r<rows;r++){
 
         for(let c=0;c<cols;c++){
 
-            if(index >= particles.length) return;
+            if(index>=particles.length) return;
 
-            const x =
-                offsetX +
-                c * spacing +
-                (r % 2) * (spacing / 2);
+            particles[index].tx =
+                startX +
+                c*a +
+                (r%2)*(a/2);
 
-            const y =
-                offsetY +
-                r * spacing * 0.86;
-
-            particles[index].tx = x;
-            particles[index].ty = y;
+            particles[index].ty =
+                startY +
+                r*(Math.sqrt(3)/2*a);
 
             index++;
 
