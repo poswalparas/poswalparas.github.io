@@ -157,57 +157,13 @@ Explore Research →
 </div>
 
 </div>
-</div>
-
-<section class="about-section">
-
-<div class="about-photo">
-
-<img src="/images/home/profile.jpg" alt="Paras Poswal">
 
 </div>
+## About Me
 
-<div class="about-content">
+I am a PhD Candidate in the Department of Physics at the National Institute of Technology Patna, India. My research focuses on computational and experimental condensed matter physics, with particular emphasis on spintronics, two-dimensional magnetic materials, and first-principles simulations.
 
-<span class="about-tag">
-ABOUT
-</span>
-
-<h2>Paras Poswal</h2>
-
-<h4>
-Computational Materials Physicist
-</h4>
-
-<p>
-
-I am a PhD Candidate at the Department of Physics,
-National Institute of Technology Patna, India.
-
-My research integrates first-principles calculations
-and experimental approaches to investigate
-spintronics, low-dimensional magnetism,
-defect engineering and quantum materials.
-
-My goal is to understand and engineer
-spin-dependent phenomena for future
-low-power electronic and quantum devices.
-
-</p>
-
-<div class="about-links">
-
-<a href="/publications/">Publications</a>
-
-<a href="/cv/">CV</a>
-
-<a href="/contact/">Contact</a>
-
-</div>
-
-</div>
-
-</section>
+My work combines density functional theory (DFT) calculations and ion-irradiation-driven experimental approaches to investigate magnetic anisotropy, exchange interactions, spin polarization, and defect-induced magnetism in low-dimensional materials. 
 
 
 <section class="stats-section">
@@ -261,7 +217,7 @@ Research Areas
 </div>
 
 </section>
-<!--
+
 <script type="importmap">
 {
   "imports": {
@@ -271,4 +227,3 @@ Research Areas
 </script>
 
 <script type="module" src="/assets/js/hero-animation.js"></script>
--->
