@@ -69,48 +69,107 @@ class Particle{
 
 }
 
-    draw(){
+draw(){
 
-        ctx.beginPath();
+    let color;
 
-       if(this.type==0){
+    if(this.type==0){
 
-    ctx.fillStyle="#4FC3F7";
-
-}
-
-else if(this.type==1){
-
-    ctx.fillStyle="#C084FC";
-
-}
-
-else{
-
-    ctx.fillStyle="#FACC15";
-
-}
-
-        ctx.shadowBlur=18;
-        ctx.shadowColor=ctx.fillStyle;
-
-        ctx.arc(
-
-            this.x,
-
-            this.y,
-
-            this.radius,
-
-            0,
-
-            Math.PI*2
-
-        );
-
-        ctx.fill();
+        color="#4FC3F7";      // Metal
 
     }
+    else if(this.type==1){
+
+        color="#C084FC";      // Top layer
+
+    }
+    else{
+
+        color="#FACC15";      // Bottom layer
+
+    }
+
+    //------------------------------------------------
+    // Outer glow
+    //------------------------------------------------
+
+    ctx.beginPath();
+
+    ctx.fillStyle=color;
+
+    ctx.globalAlpha=0.12;
+
+    ctx.arc(
+        this.x,
+        this.y,
+        this.radius*4,
+        0,
+        Math.PI*2
+    );
+
+    ctx.fill();
+
+    //------------------------------------------------
+    // Middle glow
+    //------------------------------------------------
+
+    ctx.beginPath();
+
+    ctx.globalAlpha=0.35;
+
+    ctx.arc(
+        this.x,
+        this.y,
+        this.radius*2.3,
+        0,
+        Math.PI*2
+    );
+
+    ctx.fill();
+
+    //------------------------------------------------
+    // Atom
+    //------------------------------------------------
+
+    ctx.beginPath();
+
+    ctx.globalAlpha=1;
+
+    ctx.shadowBlur=25;
+
+    ctx.shadowColor=color;
+
+    ctx.fillStyle=color;
+
+    ctx.arc(
+        this.x,
+        this.y,
+        this.radius,
+        0,
+        Math.PI*2
+    );
+
+    ctx.fill();
+
+    //------------------------------------------------
+    // Highlight
+    //------------------------------------------------
+
+    ctx.beginPath();
+
+    ctx.fillStyle="rgba(255,255,255,0.85)";
+
+    ctx.arc(
+        this.x-this.radius*0.35,
+        this.y-this.radius*0.35,
+        this.radius*0.28,
+        0,
+        Math.PI*2
+    );
+
+    ctx.fill();
+
+    ctx.globalAlpha=1;
 
 }
 
