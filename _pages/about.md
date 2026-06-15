@@ -261,7 +261,7 @@ Research Areas
 </div>
 
 </section>
-
+</div>
 <script type="importmap">
 {
   "imports": {
