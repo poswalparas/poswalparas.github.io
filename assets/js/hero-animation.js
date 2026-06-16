@@ -305,7 +305,7 @@ function animate(){
 
     timer++;
 
-    if(mode=="assemble" && timer>260){
+    if(mode=="assemble" && timer>120){
 
         explode();
 
