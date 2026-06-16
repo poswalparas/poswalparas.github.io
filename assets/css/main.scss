@@ -425,116 +425,64 @@ padding:0;
 .landing .page__content{
     padding:0;
 }
-/* ==========================================
-   Premium Scientific Background
-========================================== */
+/* ===================================
+   Quantum Particles
+=================================== */
 
-html,
-body{
+.particles{
+position:absolute;
+inset:0;
+overflow:hidden;
+pointer-events:none;
+z-index:1;
+}
 
-    min-height:100%;
+.particles span{
 
-    background:
-        radial-gradient(circle at 15% 20%, rgba(56,189,248,.08), transparent 30%),
-        radial-gradient(circle at 85% 15%, rgba(139,92,246,.06), transparent 28%),
-        radial-gradient(circle at 50% 85%, rgba(34,211,238,.05), transparent 35%),
-        linear-gradient(
-            135deg,
-            #05070d 0%,
-            #09111f 30%,
-            #0a1727 60%,
-            #04060c 100%
-        );
+position:absolute;
 
-    background-attachment:fixed;
+width:6px;
+height:6px;
 
-    overflow-x:hidden;
+background:#38bdf8;
+
+border-radius:50%;
+
+box-shadow:
+0 0 10px #38bdf8,
+0 0 20px #38bdf8;
+
+animation:particleFloat 18s linear infinite;
+
+opacity:.6;
 
 }
-body::before{
 
-    content:"";
+.particles span:nth-child(1){left:8%;top:85%;animation-delay:0s;}
+.particles span:nth-child(2){left:18%;top:65%;animation-delay:2s;}
+.particles span:nth-child(3){left:28%;top:75%;animation-delay:5s;}
+.particles span:nth-child(4){left:38%;top:90%;animation-delay:1s;}
+.particles span:nth-child(5){left:50%;top:70%;animation-delay:7s;}
+.particles span:nth-child(6){left:62%;top:80%;animation-delay:3s;}
+.particles span:nth-child(7){left:74%;top:88%;animation-delay:9s;}
+.particles span:nth-child(8){left:82%;top:60%;animation-delay:6s;}
+.particles span:nth-child(9){left:90%;top:78%;animation-delay:4s;}
+.particles span:nth-child(10){left:96%;top:68%;animation-delay:8s;}
 
-    position:fixed;
+@keyframes particleFloat{
 
-    inset:0;
-
-    pointer-events:none;
-
-    z-index:-2;
-
-    background-image:
-
-        linear-gradient(
-            rgba(255,255,255,.025) 1px,
-            transparent 1px
-        ),
-
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,.025) 1px,
-            transparent 1px
-        );
-
-    background-size:80px 80px;
-
-    mask-image:
-        radial-gradient(circle,black 45%,transparent 100%);
-
+0%{
+transform:translateY(0px) scale(1);
+opacity:.2;
 }
-body::after{
 
-    content:"";
-
-    position:fixed;
-
-    inset:-20%;
-
-    pointer-events:none;
-
-    z-index:-3;
-
-    background:
-
-        radial-gradient(
-            circle,
-            rgba(56,189,248,.18),
-            transparent 35%
-        ) 20% 30%,
-
-        radial-gradient(
-            circle,
-            rgba(139,92,246,.14),
-            transparent 30%
-        ) 80% 15%,
-
-        radial-gradient(
-            circle,
-            rgba(34,211,238,.12),
-            transparent 40%
-        ) 60% 80%;
-
-    filter:blur(120px);
-
-    animation:backgroundFlow 30s ease-in-out infinite alternate;
-
+50%{
+opacity:1;
 }
-@keyframes backgroundFlow{
 
-    from{
-
-        transform:
-            translate(-2%,-2%)
-            scale(1);
-
-    }
-
-    to{
-
-        transform:
-            translate(2%,2%)
-            scale(1.15);
-
-    }
+100%{
+transform:translateY(-180px) scale(1.6);
+opacity:0;
+}
 
 }
